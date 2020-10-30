@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url("https://source.unsplash.com/WLUHO9A_xik/1600x900");
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container h2 {
+  font-size: 32px;
+  font-family: "Grenze Gotisch", cursive;
+  margin: 15px;
+  text-align: center;
+  border-bottom: 2px solid grey;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px white, -2px 1px #bf6d028c;
+}
+.container .box {
+  width: 450px;
+  box-shadow: 2px 2px 3px 2px rgba(150, 144, 143, 0.705);
+  padding: 25px 30px;
+  margin: 25px;
+  border-radius: 8px;
+  background-color: rgba(172, 172, 172, 0.685);
+}
+#author {
+  font-weight: bolder;
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+}
+#author::before {
+  content: "- ";
+}
+#quote {
+  border-left: 1px solid gray;
+  padding: 3px 12px;
+}
+.container button {
+  padding: 10px 15px;
+  background: rgb(228, 228, 228);
+  color: brown;
+  box-shadow: 1px 1px 2px 1px #080808;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 1s;
+  float: right;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+}
+.container button:hover {
+  box-shadow: 1px -1px 9px 1px grey inset, -1px -2px 3px 1px black inset;
+}
+
+@media only screen and (max-width: 530px) {
+  .container .box {
+    width: 90vw;
+  }
+  .container h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+}
